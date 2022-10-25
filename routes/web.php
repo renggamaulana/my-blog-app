@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    echo "hello";
+});
+
+Route::resource('admin', AdminController::class);
+Route::prefix('blog')->group(function () {
+    Route::get('/', [BlogController::class ,'index']);
+    Route::get('category', [BlogController::class ,'category']);
 });
