@@ -1,5 +1,7 @@
 <nav>
-    <a href="#" class="brand">Brand</a>
+    <div class="brand">
+        <a href="#">Brand</a>
+    </div>
     <ul class="d-flex">
         <li><a href="#">Home</a></li>
         <li><a href="#">Blog</a></li>
